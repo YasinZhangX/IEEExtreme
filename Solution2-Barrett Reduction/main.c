@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     uint32 A = atof(argv[1]);
     int B = atoi(argv[2]);
 
-    uint32 D = solution2(A, B);
+    int D = solution2(A, B);
 
     printf("get D(%u) from A(%u) and B(%d)", D, A, B);
 

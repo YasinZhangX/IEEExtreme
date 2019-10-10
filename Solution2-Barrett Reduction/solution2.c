@@ -1,15 +1,36 @@
 #include <stdio.h>
+#include "solution2.h"
 
-int main(int argc, char *argv[])
-{
-    if (argc < 3)
+static int getBitRemainFromA2B(uint32 A, int B);
+
+uint32 solution2(uint32 A, int B)
+{   
+    if (A == 0)
     {
-        printf("Usage: %s A B \n", argv[0]);
-        return 1;
+        return 0;
     }
+    
+    int bitRemain = getBitRemainFromA2B(A, B);
 
-    double A = atof(argv[1]);
-    int B = atoi(argv[2]);
+    return 0;
+}
+
+static int getBitRemainFromA2B(uint32 A, int B)
+{
+    uint64 wall = 1;
+    int i = 0;
+    while (i < B)
+    {
+        wall <<= 1;
+        i++;
+    }
     
+    int bitRemain = 0;
+    while (A < wall)
+    {
+        A <<= 1;
+        bitRemain++;
+    }
     
+    return bitRemain;
 }

@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
     int D = solution2(A, B);
 
-    printf("get D(%u) from A(%u) and B(%d)", D, A, B);
+    printf("get D(%u) from A(%u) and B(%d)\r\n", D, A, B);
 
     return 0;
 }
